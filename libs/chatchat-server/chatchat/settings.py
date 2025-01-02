@@ -11,6 +11,7 @@ from chatchat import __version__
 from chatchat.pydantic_settings_file import *
 
 
+os.environ["CHATCHAT_ROOT"] = "/home/amax/Documents/Langchain-Chatchat/libs/chatchat-server/chatchat/chatchat_data"
 # chatchat 数据目录，必须通过环境变量设置。如未设置则自动使用当前目录。
 CHATCHAT_ROOT = Path(os.environ.get("CHATCHAT_ROOT", ".")).resolve()
 

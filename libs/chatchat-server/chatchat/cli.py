@@ -2,6 +2,7 @@ import click
 from pathlib import Path
 import shutil
 import typing as t
+import os
 
 from chatchat.startup import main as startup_main
 from chatchat.init_database import main as kb_main, create_tables, folder2db
@@ -11,7 +12,7 @@ from chatchat.server.utils import get_default_embedding
 
 
 logger = build_logger()
-
+os.environ["CHATCHAT_ROOT"] = "/home/amax/Documents/Langchain-Chatchat/libs/chatchat-server/chatchat/chatchat_data"
 
 @click.group(help="chatchat 命令行工具")
 def main():
